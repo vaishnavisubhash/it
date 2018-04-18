@@ -1,0 +1,9 @@
+<?php
+include("vv.php");
+$name=$_GET['candidate'];
+echo $name."<br />";
+$query="update vote set vote=vote+1 where name=\"$name\"";
+mysqli_query($dbh,$query)or die("Error updating the vote");
+echo "your vote is successful"."<br />";
+?>
+
